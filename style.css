@@ -150,3 +150,153 @@ box-shadow:0 0 10px 3px rgba(230,107,165,.55),0 0 25px 7px rgba(230,107,165,.35)
  html{scroll-behavior:auto}
  *,*::before,*::after{transition:none!important;animation:none!important}
 }
+
+
+/* ===== ajustes responsivos adicionais ===== */
+html {
+  width: 100%;
+  overflow-x: clip;
+}
+body {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.wrap,
+.bar {
+  width: min(1100px, calc(100% - 2.5rem));
+}
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+iframe,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+.split > *,
+.grid2 > *,
+.grid4 > *,
+.gallery > *,
+.case > * {
+  min-width: 0;
+}
+.ph img {
+  object-position: center;
+}
+.btn {
+  white-space: normal;
+  text-align: center;
+}
+.case dd {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .bar {
+    gap: 1rem;
+  }
+  .brand {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .split {
+    gap: 2rem;
+  }
+  .grid2 {
+    gap: 1.5rem;
+  }
+  .grid4 {
+    gap: 1rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .case {
+    grid-template-columns: minmax(100px, .35fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .wrap,
+  .bar {
+    width: calc(100% - 2rem);
+  }
+  .bar {
+    min-height: 60px;
+  }
+  .top nav {
+    top: 60px;
+  }
+  .hero {
+    padding-block: 3rem;
+  }
+  .sec {
+    padding-block: 3rem;
+  }
+  .small-hero {
+    padding-block: 2.5rem;
+  }
+  .lead {
+    font-size: 1.08rem;
+  }
+  .big {
+    font-size: 1.12rem;
+  }
+  .grid4,
+  .grid2,
+  .gallery,
+  .case {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .grid4 {
+    gap: .75rem;
+  }
+  .grid4 > div {
+    padding: 1rem .75rem;
+  }
+  .gallery {
+    gap: 1.25rem;
+  }
+  .portrait,
+  .tall {
+    aspect-ratio: 4 / 5;
+  }
+  .portrait {
+    width: min(100%, 340px);
+    margin-inline: auto;
+  }
+  .sq {
+    max-width: min(100%, 320px);
+  }
+  .case {
+    gap: .25rem;
+  }
+  .case dt {
+    margin-top: .5rem;
+  }
+  .btn {
+    margin-right: .35rem;
+    padding: .7rem 1rem;
+  }
+  .foot .wrap {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrap,
+  .bar {
+    width: calc(100% - 1.25rem);
+  }
+  h1 {
+    font-size: clamp(1.9rem, 9vw, 2.4rem);
+  }
+  .burger {
+    padding-inline: .65rem;
+  }
+}
